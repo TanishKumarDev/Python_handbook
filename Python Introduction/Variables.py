@@ -1,3 +1,5 @@
+#----------Python Variables----------
+
 basic_variables = "Python Variables"
 print(basic_variables)
 
@@ -5,12 +7,11 @@ print(basic_variables)
 dynamic_typing = "Python is a dynamically typed language"
 print(dynamic_typing)
 
-# Multiple Assignments
-
+#----------Multiple Assignments----------
 a, b, c = 5, 10, 15
 print("Values:", a, b, c)
 
-# Type Casting a Variable
+#----------Type Casting a Variable----------
 s = "25" # initial a string
 
 int_value = int(s) # converting string to integer
@@ -22,13 +23,13 @@ print("Integer value:", int_value)
 print("Float value:", converted_float)
 print("String value:", string_value)
 
-# Check data types
+#----------Check Data Types----------
 print("Data type of original string:", type(s))
 print("Data type of integer value:", type(int_value))
 print("Data type of float value:", type(converted_float))
 print("Data type of string value:", type(string_value))
 
-# Object Reference in Python
+#----------Object Reference in Python----------
 x = 5 # x refers to an integer object
 y = x # y refers to the same integer object as x
 z = 10 # z refers to a different integer object
@@ -44,7 +45,7 @@ print("Value of x:", x)
 print("Value of y:", y)
 print("Value of z:", z)
 
-# Delete a Variable Using del Keyword
+#----------Delete a Variable Using del Keyword----------
 int_value = 10
 print("Value of int_value before deletion:", int_value)
 
@@ -55,7 +56,7 @@ try:
 except NameError:
     print("int_value is deleted and no longer accessible.")
 
-# Practical Examples
+#----------Practical Examples----------
 # 1. Swapping Two Variables
 num1 = 5
 num2 = 10
@@ -67,4 +68,5 @@ word = "Hello"
 char_count = len(word)
 print("Number of characters in '", word, "':", char_count)
 
-# Scope of a Variable
+#----------Scope of a Variable----------
+# (Add your scope examples here)
