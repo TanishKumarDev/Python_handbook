@@ -1,135 +1,90 @@
-# 👉 for loops
+# Python Loops Practice Problems
 
-# Problem 1: Print each item in a shopping list
-items = input("Enter items for your shopping list: ").split(',')
+# 1. For Loops
+# Problem 1: Print Shopping List
+shopping_items = input("Enter items separated by commas: ").split(',')
+for item in shopping_items:
+    print("Buy: ",item.strip())
 
-for item in items:
-    print("Buy:", item.strip())
+# Problem 2: Print Squares of Numbers
+num = int(input("Enter a number: "))
+for i in range(1, num + 1):
+    print("Square of", i, "is", i * i)
 
-# Problem 2: Print squares of numbers from 1 to n
-input_num = int(input("Enter a number: "))
-
-for i in range(1, input_num + 1):
-    print("Square of", i, "is", i**2)
-
-# 👉 while loop
-
-# Problem 1: Countdown timer
-
+# 2. While Loops
+# Problem 1: Countdown Timer
 seconds = int(input("Enter seconds for countdown: "))
-
 while seconds > 0:
-    print("Countdown:", seconds)
+    print("Time left:", seconds, "seconds")
     seconds -= 1
 print("Time's up!")
 
-# Problem 2: Sum until user enters 0
-
+# Problem 2: Sum Until Zero
 total = 0
-while True:
-    num = int(input("Enter a number (0 to stop): "))
-    if num == 0:
-        break
+num = int(input("Enter number (0 to stop): "))
+while num != 0:
     total += num
-print("Total sum is:", total)
+    num = int(input("Enter number (0 to stop): "))
+print("Total sum:", total)
 
-# 👉 Nested for Loops
-
-# Problem 1: Print a multiplication table
-multiplication_table = int(input("Enter a number for multiplication table: "))
-for i in range(1, 11):
-    print(multiplication_table, "x", i, "=", multiplication_table * i)
-
-# Problem 2: Print Identity Matrix Pattern
-
-n = 4
-
-for i in range(n):
-    for j in range(n):
-
-        if i == j:
-            print(1, end=' ')
-        else:
-            print(0, end=' ')
+# 3. Nested For Loops
+# Problem 1: Multiplication Table
+n = 3
+for i in range(1, n + 1):
+    for j in range(1, 11):
+        print(i * j, end=' ')
     print()
 
-# 👉 Control Flow Statements in Loops
+# Problem 2: Identity Matrix Pattern
+n = 4
+for i in range(n):
+    for j in range(n):
+        print("1" if i == j else "0", end=" ")
+    print()
 
-# 1. break
-# Problem 1: Stop printing at a target item
-shopping_list = ["apple", "banana", "cherry", "date"]
+# 4. Control Flow Statements in Loops
 
-target_item = "cherry"
+# 4.1 break
+# Problem 1: Stop Printing at Target Item
 
-for item in shopping_list:
-    if item == target_item:
-        print("Found target item:", item)
+items = ["apple", "banana", "cherry", "date"]
+target = "cherry"
+for item in items:
+    if item == target:
         break
-    print("Current item:", item)
+    print("Item:", item)
 
-# Problem 2: Find first even number
-
+# Problem 2: Find First Even Number
 while True:
-    num = int(input("Enter a number (negative to stop): "))
-    if num < 0:
-        break
+    num = int(input("Enter a number: "))
     if num % 2 == 0:
         print("First even number found:", num)
         break
-    print("No even number found.")
 
-# 2. continue
+# 4.2 continue
 
-# Problem 1: Skip out-of-stock items
-inventory = ["apple", "banana", "cherry", "date"]
-out_of_stock = ["banana", "date"]
-
-for item in inventory:
-    if item in out_of_stock:
+# Problem 1: Skip Out-of-Stock Items
+items = ["milk", "bread", "out of stock", "eggs"]
+for item in items:
+    if item == "out of stock":
         continue
-    print("In stock:", item)
+    print("Buy:", item)
 
-# Problem 2: Skip even numbers
+# Problem 2: Skip Even Numbers
 n = 10
-
-for i in range(n):
+for i in range(1, n + 1):
     if i % 2 == 0:
         continue
     print("Odd number:", i)
 
-# 3. pass
-
-# Problem 1: Use pass for future implementation
-tasks = ["task1", "task2", "task3"]
-
+# 4.3 pass
+# Problem 1: Placeholder for Future Code
+tasks = ["email", "meeting", "call"]
 for task in tasks:
-    if task == "task2":
-        pass # Future implementation
-    print("Processing", task)
+    if task == "call":
+        pass  # Logic to be added later
+    print("Do:", task)
 
-# Problem 2: Pass in empty loop for now
+# Problem 2: Empty Loop
 for i in range(5):
-    pass
-
-
-# 👉 Understand Working of for loop
-
-# Example with for loop
-nums = [10, 20, 30]
-
-for x in nums:
-    print(x)
-
-# Internal working (using iter + next + while)
-nums = [10, 20, 30]
-
-# Step 1: get an iterator
-it = iter(nums)
-
-# Step 2: keep fetching next item until StopIteration
-while True:
-    try:
-        x = next(it)   # get next element
-        print(x)
-    except StopIteration:
-        break   # no more items → exit loop
+    pass  # Loop does nothing
