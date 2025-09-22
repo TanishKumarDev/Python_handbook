@@ -61,6 +61,9 @@ def square(num):
 print("Square of 4 is:", square(4))
 
 # 6. Pass by Reference vs Pass by Value
+# In Python, functions pass arguments by object reference, not by value.
+# This means that if the argument is an immutable object (like an int or a str), it will remain unchanged.
+# If the argument is a mutable object (like a list or a dict), any changes made to it inside the function will be reflected outside the function.
 
 # Mutable objects (lists, dicts) → modifications inside the function affect original.
 def modify_list(lst):

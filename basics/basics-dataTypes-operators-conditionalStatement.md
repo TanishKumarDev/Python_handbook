@@ -1,7 +1,7 @@
 # Python Basics: Data Types, Operators, and Conditional Statements
 
 ## 1. Python Data Types
-
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20241210131752166623/Python-Data-Types.webp)
 ### 1.1 Overview
 - Data types classify data items and define allowable operations.
 - Everything in Python is an object; variables are instances of these classes.

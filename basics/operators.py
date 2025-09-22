@@ -80,7 +80,7 @@ print(a is not b)
 print(a is c)
 
 
-# 🎯 Membership  Operators
+# 🎯 Membership  Operators -  in and not in are the membership operators that are used to test whether a value or variable is in a sequence.
 
 x = 24
 y = 20
